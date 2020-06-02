@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.bg {
+			height: 650px;
+			width: 1200px;
+			position: absolute;
+			top: 0px;
+			left: 100px;
+		}
+
+		.box1 {
+			height: 650px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			top: 0px;
+		}
+		.txt {
+			color: white;
+			font-family: arial;
+
+		}
+		.img {
+			height: 70px;
+			width: 70px;
+		}
+		.img2 {
+			height: 70px;
+			width: 90px;
+		}
+		.img3 {
+			height: 70px;
+			width: 90px;
+		}
+		.score {
+			color: white;
+			font-family: arial;
+			position: absolute;
+			top: 500px;
+			left: 0px;
+		}
+		.btn {
+			background: white;
+			height: 40px;
+			width: 70px;
+			position: absolute;
+			top: 570px;
+			left: 15px;
+			border-radius: 10px;
+		}
+		.img4 {
+			height: 70px;
+			width: 70px;
+			position: absolute;
+			top: 500px;
+			left: 1000px;
+			display: none;
+		}
+		.img5 {
+			height: 70px;
+			width: 90px;
+			position: absolute;
+			top: 230px;
+			left: 500px;
+			display: none;
+		}
+		.img6 {
+			height: 70px;
+			width: 90px;
+			position: absolute;
+			top: 590px;
+			left: 30px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<h2 class="txt">Найди:</h2>
+		<h3 class="txt">1.</h3>
+		<img src="dm.png" class="img">
+		<h3 class="txt">2.</h3>
+		<img src="stlogo.png" class="img2">
+		<h3 class="txt">3.</h3>
+		<img src="3.png" class="img3">
+		<h2 class="txt">ОЧКИ: <span class="score"></span></h2>
+		<button class="btn"><h3>Начать</h3></button>
+	</div>
+	<div style="background-image: url(bg.jpg);background-size: 100% 100%;" class="bg">
+		<div ><img src="dm2.png" class="img4"></div>
+		<div ><img src="stlogo2.png" class="img5"></div>
+		<div ><img src="32.png" class="img6"></div>
+
+	</div>
+
+	<script type="text/javascript">
+		let number = 0;
+		document.querySelector('.score').innerHTML = number;
+		document.querySelector('.btn').onclick = function(){
+			number = number + 1;
+		document.querySelector('.score').innerHTML = number;
+		}
+		document.querySelector('.btn').onclick = function(){
+			alert('Найди демогоргона (его фото под номeром 1 )');
+			document.querySelector('.img4').style.display = 'block';
+		}
+		document.querySelector('.img4').onclick = function(){
+			number = number + 1;
+			document.querySelector('.score').innerHTML = number;
+		    alert('Правильно!')
+		    document.querySelector('.img4').style.display = 'none';
+		    alert('Найди логотип "stranger things" (его фото под номeром 2 )')
+		    document.querySelector('.img5').style.display = 'block';
+		}
+		document.querySelector('.img5').onclick = function(){
+			number = number + 1;
+			document.querySelector('.score').innerHTML = number;
+		    alert('Правильно!')
+		    document.querySelector('.img5').style.display = 'none';
+		    alert('Найди наших друзей в пиксельной рисовке (их фото под номeром 3 )')
+		}
+		document.querySelector('.img5').onclick = function(){
+			number = number + 1;
+			document.querySelector('.score').innerHTML = number;
+		    alert('Правильно!')
+		    document.querySelector('.img5').style.display = 'none';
+		    alert('Найди наших друзей в пиксельной рисовке (их фото под номeром 3 )')
+		     document.querySelector('.img6').style.display = 'block';
+		}
+		document.querySelector('.img6').onclick = function(){
+			number = number + 1;
+			document.querySelector('.score').innerHTML = number;
+		    alert('Правильно!')
+		    document.querySelector('.img6').style.display = 'none';
+		    alert('Вы выиграли!')
+		}
+	</script>
+</body>
+</html>
